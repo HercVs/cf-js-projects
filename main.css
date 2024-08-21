@@ -1,0 +1,25 @@
+body {
+    margin-top: 52px;
+    background-color: #153530;
+}
+
+.aside {
+    min-width: 250px;
+    width: 18vw;
+}
+
+.color-picker {
+    background-color: #999999;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-white {
+    color: white
+}

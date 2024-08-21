@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Random</a>
+                <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex ms-2">
+                        <input class="form-control me-2" type="text" placeholder="#ffffff" id="inputColor">
+                        <button class="btn btn-outline-secondary" type="button" id="displayInputColorBtn">Display</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex">
+        <div class="aside d-flex flex-column bg-dark text-white fs-4 text-center pt-1 pb-4">
+            <!-- Color Display -->
+            <div class="color-picker d-flex flex-column align-items-center py-5">
+                <div class="color-box d-flex flex-column p-3 bg-dark rounded" id="colorBox">
+                    <span>Selected color:</span>
+                    <span id="colorDisplay">#999999</span>
+                </div>
+                <button type="button" class="btn btn-success btn-lg mt-2" id="displayRandomColorBtn">Generate</button>
+            </div>    
+
+            <div class="color-weights d-flex flex-column align-items-center justify-content-around" >
+                <div class="container-weight-red p-2">
+                    <!-- Counter Red -->
+                    <div>
+                        <div class="mb-1">
+                            <span>Red</span>
+                        </div>
+                        <div class="border border-black rounded-pill">
+                            <span class="counter" data-color="red">0</span>
+                        </div>
+                    </div>
+    
+                    <!-- Buttons Red -->
+                    <div class="d-flex mt-2">
+                        <div>
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="red" data-mode="decrease">-</button>
+                        </div>
+                        <div class="me-2 ms-2">
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="red" data-mode="reset">0</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="red" data-mode="increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-weight-green p-2">
+                    <!-- Counter Green -->
+                    <div>
+                        <div class="mb-1">
+                            <span>Green</span>
+                        </div>
+                        <div class="border border-black rounded-pill">
+                            <span class="counter" data-color="green">0</span>
+                        </div>
+                    </div>
+    
+                    <!-- Buttons Green -->
+                    <div class="d-flex mt-2">
+                        <div>
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="green" data-mode="decrease">-</button>
+                        </div>
+                        <div class="me-2 ms-2">
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="green" data-mode="reset">0</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="green" data-mode="increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-weight-blue p-2">
+                    <!-- Counter Blue -->
+                    <div>
+                        <div class="mb-1">
+                            <span>Blue</span>
+                        </div>
+                        <div class="border border-black rounded-pill">
+                            <span class="counter" data-color="blue">0</span>
+                        </div>
+                    </div>
+    
+                    <!-- Buttons Blue -->
+                    <div class="d-flex mt-2">
+                        <div>
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="blue" data-mode="decrease">-</button>
+                        </div>
+                        <div class="me-2 ms-2">
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="blue" data-mode="reset">0</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-outline-success" type="button" data-color="blue" data-mode="increase">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main container-fluid">
+
+        </div>    
+    </main>
+
+    <!-- <footer class="position-fixed bottom-0 container-fluid bg-dark">
+        <div class="text-center text-white p-3">
+            <span >© 2024 Copyright:</span>
+            <a class="text-white" href="#">hv</a>
+        </div>
+    </footer> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="./color.js"></script>    
+</body>
+</html>
