@@ -1,5 +1,4 @@
 const DEFAULT = 0
-counter = 0
 let color, mode
 let colorCounters = {
     red: DEFAULT,
@@ -168,9 +167,7 @@ function increaseCounter(color) {
  */
 function updateCounter(color) {
     let colorCounter = $('.counter').filter(`[data-color=${color}]`)
-    // Data binding
     colorCounter.text(colorCounters[color])
-    // Styling
     styleCounterElement(colorCounter, color)
 }
 
